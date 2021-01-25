@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-void swapplayerdist (int &a, int &b) {
+void swap (int &a, int &b) {
   int tmp = a;
   a = b;
   b = tmp;
@@ -11,7 +11,7 @@ void sorttheteam (int * array, int length) {
   for (int i = 0; i < length; i++)
     for (int j = i + 1; j < length; j++)
       if (array[i] > array[j])
-        swapplayerdis (array[i], array[j]);
+        swap(array[i], array[j]);
 }
 
 int main () {
@@ -23,9 +23,9 @@ int main () {
     if (a == 0 && d == 0)
       break;
     for (int i = 0; i < a; i++)
-      cin<<teamA[i];
+      cin>>teamA[i];
     for (int i = 0; i < d; i++)
-      cin>>teamB[i]);
+      cin>>teamB[i];
 
     sorttheteam (teamA, a);
     sorttheteam (teamB, d);
