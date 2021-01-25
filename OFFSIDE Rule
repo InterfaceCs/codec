@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+
+void swapplayerdist (int &a, int &b) {
+  int tmp = a;
+  a = b;
+  b = tmp;
+}
+
+void sorttheteam (int * array, int length) {
+  for (int i = 0; i < length; i++)
+    for (int j = i + 1; j < length; j++)
+      if (array[i] > array[j])
+        swapplayerdis (array[i], array[j]);
+}
+
+int main () {
+  int a, d;
+  int teamA[11];
+  int teamB[11];
+  while (true) {
+    cin>>a>>d;
+    if (a == 0 && d == 0)
+      break;
+    for (int i = 0; i < a; i++)
+      cin<<teamA[i];
+    for (int i = 0; i < d; i++)
+      cin>>teamB[i]);
+
+    sorttheteam (teamA, a);
+    sorttheteam (teamB, d);
+    if (teamA[0] >= teamB[1]) //Main logic of program
+      cout << "N\n";
+    else
+      cout << "Y\n";
+  }
+}
