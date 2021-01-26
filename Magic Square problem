@@ -1,0 +1,55 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    
+    int a[3][3],arr[8];
+    for(int i=0;i<8;i++)
+        arr[i]=0;
+    
+    int a1[3][3]={{2,7,6},{9,5,1},{4,3,8}};
+    int a2[3][3]={{6,1,8},{7,5,3},{2,9,4}};
+    int a3[3][3]={{8,3,4},{1,5,9},{6,7,2}};
+    int a4[3][3]={{4,9,2},{3,5,7},{8,1,6}};
+    int a5[3][3]={{6,7,2},{1,5,9},{8,3,4}};
+    int a6[3][3]={{4,3,8},{9,5,1},{2,7,6}};
+    int a7[3][3]={{8,1,6},{3,5,7},{4,9,2}};
+    int a8[3][3]={{2,9,4},{7,5,3},{6,1,8}};
+   
+    for (int i=0;i<3;i++)
+        {
+            for(int j=0;j<3;j++)
+                {
+                cin>>a[i][j];
+                }    
+        }
+    
+    for (int i=0;i<3;i++)
+        {
+            for(int j=0;j<3;j++)
+                {
+                arr[0]+=abs(a1[i][j]-a[i][j]);
+                arr[1]+=abs(a2[i][j]-a[i][j]);
+                arr[2]+=abs(a3[i][j]-a[i][j]);
+                arr[3]+=abs(a4[i][j]-a[i][j]);
+                arr[4]+=abs(a5[i][j]-a[i][j]);
+                arr[5]+=abs(a6[i][j]-a[i][j]);
+                arr[6]+=abs(a7[i][j]-a[i][j]);
+                arr[7]+=abs(a8[i][j]-a[i][j]);
+                
+                }    
+        }
+        
+        
+    sort(arr,arr+8);
+    
+    cout<<arr[0];
+    
+    return 0;
+}
