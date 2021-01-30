@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+\\main logic is % 10 this gives the whole logic of this problem
+
+int main() {
+	
+	int c;
+	cin>>c;
+	if(c%10==0?cout<<2<<endl:cout<<1<<endl<<c%10);
+
+	return 0;
+}
